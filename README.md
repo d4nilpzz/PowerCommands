@@ -15,6 +15,9 @@ Where the `\bin` folder is where the scripts and the configuration must be.
 
 Now restart your computer to apply the enviroment variable and enjoy the commands in your terminal.
 
+> [!NOTE]
+> Take a look at the [ConfigFile](https://github.com/d4nilpzz/PowerCommands/blob/main/bin/README.md) and how to change values in it.
+
 ## Commands
  - [dev]() - Custom command to locate dev path `Customizable`
  - [touch]() - Crear multiple files at once `Not Customizable`
