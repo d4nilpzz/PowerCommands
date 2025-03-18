@@ -1,4 +1,4 @@
-$ConfigFile = Join-Path $PSScriptRoot "config.ini"
+$ConfigFile = Join-Path -Path $PSScriptRoot -ChildPath "config.ini"
 
 function Read-IniFile($filePath) {
     $ini = @{}
@@ -16,14 +16,52 @@ function Read-IniFile($filePath) {
 }
 
 function Update-IniFile($filePath, $section, $key, $newValue) {
-    $content = Get-Content $filePath
-    $updatedContent = $content -replace "(?<=\[$section\](?:\r?\n|\r).*?$key=).*", "$key=$newValue"
-    
-    if ($updatedContent -eq $content) {
-        $updatedContent = $content + "`r`n[$section]`r`n$key=$newValue"
+    if (-not (Test-Path $filePath)) {
+        Write-Output "Error: config.ini not found."
+        return
     }
-    $updatedContent | Set-Content $filePath
+
+    Write-Output "Updating [$section] $key=$newValue in $filePath"
+
+    # Asegurar permisos de escritura
+    if ((Get-Item $filePath).IsReadOnly) {
+        Write-Output "Error: config.ini is read-only. Removing read-only attribute..."
+        Set-ItemProperty -Path $filePath -Name IsReadOnly -Value $false
+    }
+
+    $content = Get-Content $filePath
+    $updatedContent = @()
+    $inSection = $false
+    $keyUpdated = $false
+
+    foreach ($line in $content) {
+        if ($line -match "^\[$section\]$") {
+            $inSection = $true
+        } elseif ($inSection -and $line -match "^\[.+\]$") {
+            $inSection = $false
+        }
+
+        if ($inSection -and $line -match "^\s*$key\s*=") {
+            $updatedContent += "$key=$newValue"
+            $keyUpdated = $true
+        } else {
+            $updatedContent += $line
+        }
+    }
+
+    if (-not $inSection) {
+        $updatedContent += "`r`n[$section]"
+    }
+
+    if (-not $keyUpdated) {
+        $updatedContent += "$key=$newValue"
+    }
+
+    Write-Output "Writing new content to file..."
+    $updatedContent | Set-Content -Path $filePath -Encoding UTF8
+    Write-Output "Update complete!"
 }
+
 if ($args.Length -eq 0) {
     $config = Read-IniFile $ConfigFile
     if ($config.Development.path) {
@@ -35,13 +73,13 @@ if ($args.Length -eq 0) {
         Write-Output "Path not found in config.ini"
     }
 }
-elseif (($args.Length -eq 0) -or ($args[0] -eq "-h") -or ($args[0] -eq "--help")) {
+elseif (($args[0] -eq "-h") -or ($args[0] -eq "--help")) {
     Write-Output "Usage:"
     Write-Output "  dev          -> Change to the path in config.ini"
     Write-Output "  dev config   -> Show the current configuration."
     Write-Output "  dev set <section> <key> <value> -> Update a key in a section in config.ini"
 }
-elseif ($args[0] -eq "set" -and $args.Length -eq 3) {
+elseif ($args[0] -eq "set" -and $args.Length -eq 4) {
     $section = $args[1]
     $key = $args[2]
     $value = $args[3]
