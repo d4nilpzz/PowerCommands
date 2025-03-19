@@ -19,6 +19,8 @@ Now restart your computer to make sure environment variable is applied successfu
 > Take a look at the [ConfigFile](https://github.com/d4nilpzz/PowerCommands/blob/main/bin/README.md) and how to change values in it.
 
 ## Commands
- - [dev]() - Custom command to locate dev path `Customizable`
+ - [dev]() - Custom command to locate dev path & change commands config `Customizable`
  - [touch]() - Crear multiple files at once `Not Customizable`
  - [ip]() - show network information `Not Customizable`
+ - [trash]() - Send files to `Recycle Bin` or open the explorer path `Not Customizable`
+ - [reboot]() - Reboot your computer, you can also put timer with `-t 0` `Not Customizable`
