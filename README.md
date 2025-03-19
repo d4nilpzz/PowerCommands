@@ -2,7 +2,7 @@
 Donwload the latest version of `PowerCommands` and enjoy a bunch of linux and custom commands for windows.
 
 ## Instalation
-Once you have downloaded the zip, unzip it and put it in a folder that will not be touched.
+Once you have downloaded the zip, unzip it and run the `installer.ps1` as administrator
 
 Next you have to add a `path` enviroment variable pointing to `path/to/your/folder/bin` In my case i have this path for the enviroment variable.
 
