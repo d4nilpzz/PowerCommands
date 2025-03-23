@@ -6,6 +6,8 @@ Once you have downloaded the zip, unzip it and run the `installer.ps1` as admini
 
 > [!IMPORTANT]
 > Execute the `installer.ps1` as administrator is necesary to add the environment variable.
+>
+> Also if you have another version just donwload the command zip and move it to the `/bin` folder.
 
 ```
 C:\PowerCommands\bin
