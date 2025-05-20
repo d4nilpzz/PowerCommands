@@ -26,4 +26,5 @@ Now restart your computer to make sure environment variable is applied successfu
  - [ip]() - show network information `Not Customizable`
  - [trash]() - Send files to `Recycle Bin` or open the explorer path `Not Customizable`
  - [reboot]() - Reboot your computer, you can also put timer with `-t 0` `Not Customizable`
+ - [t6]() - Plutonium T6 activation command `Not Customizable`
  - [cat]() - View file contents `Not Customizable`
