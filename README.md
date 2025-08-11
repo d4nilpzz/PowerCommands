@@ -17,10 +17,14 @@ Once the installer finish, you can open a terminal and test the commands & scrip
 Take a look at the command list:
 
 ### Commands
- - [dev]() - Custom command to locate dev path `Customizable`
- - [touch]() - Create a file or multiple files at once with it
- - [ip a]() - Show your network Ipv4 address
- - [reboot]() - Reboot your computer, also support some args
-   - `-t 0` set the time to reboot
-   - `-B` reboot your system and join the BIOS
- - [secret]() - Generate a random 64-character alphanumeric secret string
+ - `dev` - Custom command to locate dev path
+ - `touch` - Create a file or multiple files at once with it
+ - `ip a` - Show your network information with args
+   - Show IPv4 with `v4` or `a`
+   - Show IPv6 with `v6`
+   - Show all with `all`
+   - Renew and release with `renew` & `release`
+ - `reboot`
+   - Set the timer with `-t 0`
+   - Reboot to join the `BIOS` / `UEFI`
+ - `secret` - Generate a random 64-character alphanumeric secret string
