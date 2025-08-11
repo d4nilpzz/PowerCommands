@@ -23,4 +23,3 @@ Take a look at the command list:
  - [reboot]() - Reboot your computer, also support some args
    - `-t 0` set the time to reboot
    - `-B` reboot your system and join the BIOS
- - [cat]() - View file contents `Not Customizable`
