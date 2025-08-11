@@ -9,7 +9,7 @@ if (!(Test-Path $destination)) {
 if (Test-Path $binSource) {
     Copy-Item -Path $binSource -Destination $destination -Recurse -Force
 } else {
-    Write-Host "La carpeta 'bin' no se encontró en el mismo directorio del instalador." -ForegroundColor Red
+    Write-Host "The 'bin' folder was not found in the installer's directory." -ForegroundColor Red
     exit 1
 }
 
@@ -17,10 +17,9 @@ $envPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
 if ($envPath -notlike "*$binDestination*") {
     $newPath = "$envPath;$binDestination"
     [System.Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
-    Write-Host "Se ha agregado '$binDestination' al PATH." -ForegroundColor Green
+    Write-Host "'$binDestination' has been added to the PATH." -ForegroundColor Green
 } else {
-    Write-Host "'$binDestination' ya está en el PATH." -ForegroundColor Yellow
+    Write-Host "'$binDestination' is already in the PATH." -ForegroundColor Yellow
 }
 
-Write-Host "Instalación completada." -ForegroundColor Green
-
+Write-Host "Installation completed." -ForegroundColor Green
