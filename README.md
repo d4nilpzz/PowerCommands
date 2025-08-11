@@ -23,3 +23,4 @@ Take a look at the command list:
  - [reboot]() - Reboot your computer, also support some args
    - `-t 0` set the time to reboot
    - `-B` reboot your system and join the BIOS
+ - [secret]() - Generate a random 64-character alphanumeric secret string
