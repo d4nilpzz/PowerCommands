@@ -4,14 +4,12 @@
   <a href="https://discord.d4nilpzz.dev"><img alt="Discord" src="https://img.shields.io/discord/1373385570965000292?label=Discord"></a>
   <br />
   <br />
-  <a href="https://github.com/d4nilpzz/windows-tools#PowerCommands">PowerCommands</a>
-  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://discord.d4nilpzz.dev">discord</a>
+  <a>Here you will find a bunch of Windows tools & scripts.</a>
   <br />
   <br />
 </div>
 
-Here you will find a bunch of Windows tools & scripts.
+
 
 ## ⚡ PowerCommands
 Once you have downloaded the zip, extract the content and run the `installer.ps1` as administrator.
