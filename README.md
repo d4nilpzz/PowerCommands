@@ -4,7 +4,7 @@
   <a href="https://discord.d4nilpzz.dev"><img alt="Discord" src="https://img.shields.io/discord/1373385570965000292?label=Discord"></a>
   <br />
   <br />
-  <a href="https://github.com/d4nilpzz/unusual-cache#PowerCommands">PowerCommands</a>
+  <a href="https://github.com/d4nilpzz/windows-tools#PowerCommands">PowerCommands</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://discord.d4nilpzz.dev">discord</a>
   <br />
