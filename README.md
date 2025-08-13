@@ -1,4 +1,16 @@
-### WindowsTools
+<div align="center">
+  <h1>Windows Tools</h1>
+  <a href="https://github.com/prisma/prisma/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" /></a>
+  <a href="https://discord.d4nilpzz.dev"><img alt="Discord" src="https://img.shields.io/discord/1373385570965000292?label=Discord"></a>
+  <br />
+  <br />
+  <a href="https://github.com/d4nilpzz/unusual-cache#PowerCommands">PowerCommands</a>
+  <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+  <a href="https://discord.d4nilpzz.dev">discord</a>
+  <br />
+  <br />
+</div>
+
 Here you will find a bunch of Windows tools & scripts.
 
 ## ⚡ PowerCommands
